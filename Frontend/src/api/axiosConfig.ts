@@ -1,7 +1,7 @@
-import axios, { AxiosInstance } from 'axios'; // Import AxiosInstance type correctly
+import axios, { AxiosInstance } from 'axios';
 
 // Get backend URL from environment variables
-const API_BASE_URL: string = 'http://localhost:8000/api/weather';
+const API_BASE_URL: string = import.meta.env.VITE_BACKENDURL as string;
 
 // Explicitly type the apiClient instance
 const apiClient: AxiosInstance = axios.create({
